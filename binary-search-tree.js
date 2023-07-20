@@ -1,15 +1,12 @@
 // Before starting, copy and paste your guided practice work from
 // `binary-search-tree.js` into this file
-
-// Your code here
-
 class TreeNode{
     constructor(value){
         this.value = value;
         this.left = null;
         this.right = null;
     }
-   
+
 }
 
 class BST{
