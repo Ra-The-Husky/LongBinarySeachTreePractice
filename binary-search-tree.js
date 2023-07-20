@@ -9,7 +9,7 @@ class TreeNode{
 
 }
 
-class BST{
+class BinarySEarchTree{
     constructor(){
         this.root = null;
     }
