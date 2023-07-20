@@ -12,7 +12,7 @@ class TreeNode{
    
 }
 
-class BST{
+class BinarySEarchTree{
     constructor(){
         this.root = null;
     }
@@ -106,3 +106,5 @@ class BST{
         }
     }
 }
+
+module.exports = {TreeNode, BinarySEarchTree}
