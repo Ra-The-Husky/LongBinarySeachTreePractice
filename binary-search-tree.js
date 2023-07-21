@@ -103,3 +103,6 @@ class BinarySEarchTree{
         }
     }
 }
+
+
+module.exports = {TreeNode, BinarySEarchTree}
