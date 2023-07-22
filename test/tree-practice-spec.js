@@ -395,45 +395,45 @@ describe('Binary Tree Practice', () => {
 
       deleteNodeBST(bstRoot, 1);
       deleteNodeBST(bstRoot, 2);
-      expect(bstRoot.left.val).to.equal(3);
+      expect(bstRoot.left.value).to.equal(3);
       expect(bstRoot.left.left).to.equal(null);
       expect(bstRoot.left.right).to.equal(null);
 
       deleteNodeBST(bstRoot, 5);
       deleteNodeBST(bstRoot, 6);
-      expect(bstRoot.right.val).to.equal(7);
+      expect(bstRoot.right.value).to.equal(7);
       expect(bstRoot.right.left).to.equal(null);
       expect(bstRoot.right.right).to.equal(null);
 
       deleteNodeBST(bstRootUnbalanced, 3);
-      expect(bstRootUnbalanced.right.right.val).to.equal(4);
-      expect(bstRootUnbalanced.right.right.right.val).to.equal(5);
-      expect(bstRootUnbalanced.right.right.right.right.val).to.equal(6);
-      expect(bstRootUnbalanced.right.right.right.right.right.val).to.equal(7);
+      expect(bstRootUnbalanced.right.right.value).to.equal(4);
+      expect(bstRootUnbalanced.right.right.right.value).to.equal(5);
+      expect(bstRootUnbalanced.right.right.right.right.value).to.equal(6);
+      expect(bstRootUnbalanced.right.right.right.right.right.value).to.equal(7);
 
       deleteNodeBST(bstRootBig, 15);
-      expect(bstRootBig.right.right.right.right.val).to.equal(14);
+      expect(bstRootBig.right.right.right.right.value).to.equal(14);
 
     });
 
     it('deletes a node with two children, replacing it with the in-order predecessor or successor', function() {
 
       deleteNodeBST(bstRoot, 6);
-      expect(bstRoot.right.val).to.satisfy(function (num) {
+      expect(bstRoot.right.value).to.satisfy(function (num) {
         return (num === 5 || num === 7)
       });
 
       deleteNodeBST(bstRoot, 4);
-      expect(bstRoot.val).to.satisfy(function (num) {
+      expect(bstRoot.value).to.satisfy(function (num) {
         return (num === 3 || num === 5)
       });
-      expect(bstRoot.left.val).to.equal(2)
+      expect(bstRoot.left.value).to.equal(2)
       
       deleteNodeBST(bstRootBig, 5);
-      expect(bstRootBig.left.right.val).to.satisfy(function (num) {
+      expect(bstRootBig.left.right.value).to.satisfy(function (num) {
         return (num === 4 || num === 6)
       });
-      expect(bstRootBig.left.right.right.val).to.equal(7);
+      expect(bstRootBig.left.right.right.value).to.equal(7);
 
     });
 
