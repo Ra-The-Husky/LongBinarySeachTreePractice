@@ -321,13 +321,13 @@ describe('Binary Tree Practice', () => {
   describe('getParentNode', () => {
 
     it('returns the parent node of the node with a given value', function() {
-      expect(getParentNode(bstRoot, 1).val).to.equal(2);
-      expect(getParentNode(bstRootUnbalanced, 6).val).to.equal(5);
-      expect(getParentNode(bstRootBig, 5).val).to.equal(3);
+      expect(getParentNode(bstRoot, 1).value).to.equal(2);
+      expect(getParentNode(bstRootUnbalanced, 6).value).to.equal(5);
+      expect(getParentNode(bstRootBig, 5).value).to.equal(3);
 
-      expect(getParentNode(btRoot, 6).val).to.equal(3);
-      expect(getParentNode(btRootUnbalanced, 7).val).to.equal(1);
-      expect(getParentNode(btRootBig, 11).val).to.equal(9);
+      expect(getParentNode(btRoot, 6).value).to.equal(3);
+      expect(getParentNode(btRootUnbalanced, 7).value).to.equal(1);
+      expect(getParentNode(btRootBig, 11).value).to.equal(9);
 
     });
 

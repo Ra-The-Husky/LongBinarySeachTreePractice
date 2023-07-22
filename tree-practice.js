@@ -109,26 +109,31 @@ function getParentNode(rootNode, target) {
   if(!rootNode){
     return undefined;
   }
+
   if(rootNode.value === target){
     return null;
   }
-  if((rootNode.left && rootNode.left.value === target) || (rootNode.right && rootNode.right.value === target)){
-    return rootNode
-  }
-
-  if(rootNode.left){
-    let leftParent = getParentNode(rootNode.left, target);
-    if(leftParent){
-      return leftParent;
+  
+  const queue = [rootNode];
+  while(queue.length){
+    const parent = queue.shift();
+    if(parent.right){
+      if(parent.right.value === target){
+        return parent;
+      }else{
+        queue.push(parent.right);
+      }
+    }
+    if(parent.left){
+      if(parent.left.value === target){
+        return parent;
+      }else{
+        queue.push(parent.left);
+      }
+      
     }
   }
-  if(rootNode.right){
-    let rigthParent = getParentNode(rootNode.right, target);
-    if(rigthParent){
-      return rigthParent;
-    }
-    return undefined;
-  }
+  return undefined;
 }
 
 function inOrderPredecessor(rootNode, target) {
